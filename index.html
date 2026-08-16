@@ -3,114 +3,179 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Bebo ❤️ | A Love Story</title>
+<title>Waseela ❤️ Furqan — Our Story</title>
 <style>
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#07060a;color:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(circle at 50% 0,#6b204d55,transparent 38%),radial-gradient(circle at 10% 70%,#ff5b9a12,transparent 30%),radial-gradient(circle at 90% 35%,#c56aff10,transparent 28%)}
-#lock{position:relative;z-index:5;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:22px;background:radial-gradient(circle at 50% 20%,#5a173f,#160a18 48%,#07060b)}
-.luxe{position:absolute;inset:0;overflow:hidden;pointer-events:none}.orb{position:absolute;width:240px;height:240px;border-radius:50%;filter:blur(60px);opacity:.22;animation:drift 9s ease-in-out infinite alternate}.o1{background:#ff4d9b;left:-80px;top:8%}.o2{background:#b96cff;right:-90px;bottom:10%;animation-delay:-3s}.o3{background:#ffb0d0;width:150px;height:150px;left:45%;top:65%;animation-delay:-6s}
-@keyframes drift{to{transform:translate(50px,-35px) scale(1.18)}}
-.box{position:relative;width:min(92vw,480px);padding:40px 25px;text-align:center;border:1px solid #ffffff25;border-radius:32px;background:linear-gradient(145deg,#ffffff12,#ffffff05);backdrop-filter:blur(22px);box-shadow:0 35px 120px #000c}
-.box:after{content:"";position:absolute;inset:8px;border:1px solid #ffb4d425;border-radius:26px;pointer-events:none}.logo{font-size:64px;filter:drop-shadow(0 8px 25px #ff4d9a66)}.box h1{font-family:Georgia,serif;font-size:50px;font-weight:500;margin:6px 0 10px}.sub{letter-spacing:3px;text-transform:uppercase;font-size:10px;color:#ffb1d0}
-.muted{color:#d9cbd6;line-height:1.8}#pw{width:100%;padding:16px;border-radius:16px;border:1px solid #ffffff25;background:#08070c;color:#fff;font-size:18px;text-align:center;margin:20px 0;outline:0}.open{border:1px solid #ffffff35;border-radius:999px;padding:15px 27px;background:linear-gradient(100deg,#d92f7b,#ff82ba,#d94fa1);background-size:200% 100%;color:#fff;font-size:16px;font-weight:700;box-shadow:0 10px 35px #e6428c44;animation:shine 4s linear infinite}@keyframes shine{to{background-position:200% 0}}#error{min-height:22px;margin-top:12px;color:#ff9fbe}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;color:#fff;background:#19070d;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-5;background:
+radial-gradient(circle at 50% -10%,#9b203f 0,#57101f 24%,transparent 52%),
+radial-gradient(circle at 0 45%,#7c1735 0,transparent 32%),
+radial-gradient(circle at 100% 75%,#a52345 0,transparent 30%),
+linear-gradient(150deg,#12050a,#2a0712 48%,#10040a)}
+body:after{content:"";position:fixed;inset:0;z-index:-4;pointer-events:none;background:linear-gradient(115deg,transparent 25%,#ffb0c70c 50%,transparent 75%);animation:sweep 8s ease-in-out infinite}
+@keyframes sweep{50%{transform:translateX(12%)}}
+#lock{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:22px;position:relative;background:radial-gradient(circle at 50% 20%,#7e1738,#250812 50%,#10040a)}
+.box{width:min(92vw,490px);padding:42px 26px;text-align:center;border:1px solid #ffc2d52e;border-radius:34px;background:#ffffff0b;backdrop-filter:blur(24px);box-shadow:0 35px 120px #000d}
+.logo{font-size:64px;filter:drop-shadow(0 8px 30px #ff4b8a77)}.tiny{letter-spacing:4px;text-transform:uppercase;font-size:10px;color:#ffc1d2}
+.box h1{font-family:Georgia,serif;font-weight:400;font-size:52px;margin:7px 0 12px}.muted{color:#ead3db;line-height:1.8}
+#pw{width:100%;padding:16px;border-radius:17px;border:1px solid #ffffff25;background:#0c0307;color:#fff;font-size:18px;text-align:center;margin:20px 0;outline:0}
+.open{border:1px solid #ffffff30;border-radius:999px;padding:15px 28px;background:linear-gradient(100deg,#b51d4e,#ed4c7d,#a91647);color:#fff;font-size:16px;font-weight:700;box-shadow:0 12px 38px #d52e6745}
+#error{min-height:22px;color:#ffb3c8;margin-top:12px}
 
-#site{display:none;position:relative;z-index:1;min-height:100vh;background:linear-gradient(#0a070cdd,#0a070c)}
-#site:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(circle at 50% 5%,#671b4855,transparent 35%)}
-main{max-width:940px;margin:auto;padding:20px 16px 90px}.hero{text-align:center;padding:72px 6px 45px}.eyebrow{text-transform:uppercase;letter-spacing:5px;color:#ffabc9;font-size:10px}
-.hero h2{font-family:Georgia,serif;font-weight:500;font-size:clamp(48px,13vw,92px);line-height:.9;margin:17px 0;background:linear-gradient(100deg,#fff,#ffd6e5,#ff78ae);-webkit-background-clip:text;color:transparent;text-shadow:0 10px 45px #ff4b9a33}
-.goldline{width:90px;height:1px;margin:25px auto;background:linear-gradient(90deg,transparent,#ffabc9,transparent)}
-.section{position:relative;margin:22px 0;padding:28px;border:1px solid #ffffff16;border-radius:28px;background:linear-gradient(145deg,#ffffff0b,#ffffff04);box-shadow:0 20px 70px #0007;overflow:hidden}
-.section:before{content:"";position:absolute;left:0;top:0;width:100%;height:1px;background:linear-gradient(90deg,transparent,#ff9ec533,transparent)}
-.section h3{font-family:Georgia,serif;font-weight:500;margin:0 0 15px;font-size:27px}.message{font-size:17px;line-height:1.95;color:#eadfe8}
-.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.memory{text-align:center;animation:reveal 1s ease both}.memory img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:22px;border:1px solid #ffffff22;box-shadow:0 15px 45px #0009;transition:transform .7s ease,box-shadow .7s ease,filter .7s ease}.memory img:hover{transform:translateY(-7px) scale(1.015);box-shadow:0 25px 65px #ff4f9a33;filter:saturate(1.08)}
-.caption{padding:12px 5px 5px;color:#f4dbe7;font-family:Georgia,serif;font-size:15px;line-height:1.6;font-style:italic}
-@keyframes reveal{from{opacity:0;transform:translateY(25px) scale(.98)}to{opacity:1;transform:none}}
-video{display:block;width:100%;margin:0 0 16px;border-radius:20px;border:1px solid #ffffff16;background:#000;box-shadow:0 15px 45px #0008}
-.music{position:fixed;right:15px;bottom:15px;z-index:20;border:1px solid #ffffff30;border-radius:999px;padding:12px 18px;background:#ff579fdd;color:#fff;font-weight:700;box-shadow:0 12px 35px #0009;backdrop-filter:blur(12px)}
-.floating{position:fixed;inset:0;z-index:10;pointer-events:none;overflow:hidden}.float{position:absolute;bottom:-30px;opacity:0;animation:rise linear forwards;text-shadow:0 0 18px #ff6ca566}.f1{font-size:15px}.f2{font-size:22px}.f3{font-size:12px}
-@keyframes rise{0%{transform:translate3d(0,0,0) rotate(0);opacity:0}12%{opacity:.8}100%{transform:translate3d(var(--x),-115vh,0) rotate(35deg);opacity:0}}
-.sparkle{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;box-shadow:0 0 12px #fff;animation:twinkle 2.5s ease-in-out infinite}
-@keyframes twinkle{50%{opacity:.15;transform:scale(.3)}}
-.quote{text-align:center;font-family:Georgia,serif;font-size:21px;line-height:1.8;color:#f3d9e5;padding:12px}
-@media(max-width:600px){.gallery{gap:12px}.section{padding:22px}.hero{padding-top:60px}.caption{font-size:14px}}
+#site{display:none;min-height:100vh;position:relative}
+main{max-width:940px;margin:auto;padding:20px 17px 100px}
+.hero{text-align:center;padding:76px 8px 48px}
+.eyebrow{letter-spacing:5px;text-transform:uppercase;color:#ffb2c9;font-size:10px}
+.hero h2{font-family:Georgia,serif;font-weight:400;font-size:clamp(48px,13vw,94px);line-height:.9;margin:18px 0;background:linear-gradient(90deg,#fff,#ffd9e2,#ff739e);-webkit-background-clip:text;color:transparent}
+.line{width:105px;height:1px;margin:25px auto;background:linear-gradient(90deg,transparent,#ffc0d2,transparent)}
+.names{font-family:Georgia,serif;font-size:25px;color:#ffe1e9}.amp{color:#ff719f;padding:0 9px}
+.section{margin:24px 0;padding:29px;border:1px solid #ffc4d218;border-radius:30px;background:linear-gradient(145deg,#ffffff0b,#6e12310b);box-shadow:0 25px 80px #0008;overflow:hidden;position:relative}
+.section:before{content:"";position:absolute;left:8%;right:8%;top:0;height:1px;background:linear-gradient(90deg,transparent,#ffb1c744,transparent)}
+.section h3{font-family:Georgia,serif;font-size:28px;font-weight:400;margin:0 0 15px}.message{font-size:17px;line-height:1.95;color:#f0dce2}
+.quote{text-align:center;font-family:Georgia,serif;font-size:22px;line-height:1.8;color:#ffe0e8}
+
+.feature{text-align:center;padding:8px 0 12px}.feature-frame{position:relative;max-width:680px;margin:auto;padding:10px;border-radius:30px;background:linear-gradient(135deg,#ffd0dc55,#7b153544,#ff6f9c33);box-shadow:0 30px 100px #000b}
+.feature-frame:before{content:"";position:absolute;inset:-2px;border-radius:32px;border:1px solid #ffd4df55;animation:pulse 3s ease-in-out infinite}
+.feature img{display:block;width:100%;max-height:72vh;object-fit:contain;border-radius:23px;background:#12060b;animation:breath 6s ease-in-out infinite}
+@keyframes breath{50%{transform:scale(1.012)}}
+@keyframes pulse{50%{opacity:.4;transform:scale(1.008)}}
+.feature-caption{font-family:Georgia,serif;font-size:17px;color:#f6dce5;margin-top:16px;font-style:italic}
+
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.memory{perspective:900px;text-align:center;animation:rise .9s ease both}
+.memory:nth-child(2n){animation-delay:.12s}.memory:nth-child(3n){animation-delay:.22s}
+.memory .photo{position:relative;border-radius:22px;padding:7px;background:linear-gradient(145deg,#ffffff1c,#ff6f9c12);box-shadow:0 18px 50px #0009;transform:rotate(var(--r));transition:.7s ease}
+.memory .photo:hover{transform:rotate(0) translateY(-10px) scale(1.025);box-shadow:0 30px 70px #ff477d2e}
+.memory img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:17px}
+.caption{padding:12px 4px 4px;font-family:Georgia,serif;font-size:15px;line-height:1.6;color:#f6dbe3}
+@keyframes rise{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
+
+.float-layer{position:fixed;inset:0;z-index:10;pointer-events:none;overflow:hidden}
+.float{position:absolute;bottom:-40px;opacity:0;animation:floatUp linear forwards;text-shadow:0 0 18px #ff6b9666}
+@keyframes floatUp{0%{transform:translate3d(0,0,0) rotate(0);opacity:0}12%{opacity:.8}100%{transform:translate3d(var(--x),-115vh,0) rotate(30deg);opacity:0}}
+.music{position:fixed;right:15px;bottom:15px;z-index:30;border:1px solid #ffffff30;border-radius:999px;padding:12px 18px;background:#a51d4ed9;color:#fff;font-weight:700;box-shadow:0 12px 35px #0009;backdrop-filter:blur(14px)}
+.footer{text-align:center;padding:30px 5px;color:#e5bdc9;font-family:Georgia,serif}.heartline{font-size:32px;margin:12px}
+@media(max-width:600px){.gallery{gap:12px}.section{padding:23px}.hero{padding-top:60px}.memory .photo{padding:5px}}
 </style>
 </head>
 <body>
+
 <section id="lock">
-<div class="luxe"><i class="orb o1"></i><i class="orb o2"></i><i class="orb o3"></i></div>
 <div class="box">
-<div class="logo">❤️</div><div class="sub">A private little world</div><h1>Bebo</h1>
-<p class="muted">Some stories are too beautiful to fit into ordinary words.<br>Enter our secret word.</p>
+<div class="logo">❤️</div><div class="tiny">A private little world</div>
+<h1>Bebo</h1>
+<p class="muted">For the girl who made ordinary moments feel extraordinary.<br>Enter our secret word.</p>
 <input id="pw" type="password" placeholder="Secret word" autocomplete="off">
 <button class="open" id="openBtn">Open My Birthday ❤️</button><div id="error"></div>
-</div></section>
+</div>
+</section>
 
 <section id="site">
-<div class="floating" id="floating"></div>
+<div class="float-layer" id="floatLayer"></div>
 <button class="music" id="musicBtn">♫ Jhol</button>
 <main>
+
 <header class="hero">
-<div class="eyebrow">For my Bebo • 09 October 2026</div>
-<h2>Happy Birthday,<br>Bebo ❤️</h2>
-<div class="goldline"></div>
-<p class="muted">From your Bubba — a little collection of the moments, smiles and feelings that made our story special.</p>
+<div class="eyebrow">A birthday made with love</div>
+<h2>Happy Birthday,<br>Waseela ❤️</h2>
+<div class="line"></div>
+<div class="names">Furqan <span class="amp">×</span> Waseela</div>
+<p class="muted">Bubba &amp; Bebo — one story, a thousand little memories.</p>
 </header>
 
-<section class="section"><h3>21 May 2021 — The Day Our Story Changed ❤️</h3>
-<p class="message">I still remember the day I first proposed to you. It wasn't just a date on a calendar — it became the beginning of a story filled with tiny secrets, countless feelings, stolen smiles and memories that belong only to us.</p>
+<section class="section">
+<h3>21 May 2021 — Where It All Began ❤️</h3>
+<p class="message">The day Furqan first proposed to Waseela. Four little numbers on a calendar became the beginning of something neither of us could ever describe with just words. Since then, every smile, every secret conversation and every little café meetup has become a piece of our story.</p>
 </section>
 
-<section class="section"><h3>To My 19-Year-Old Bebo 🎂</h3>
-<p class="message">9 October 2007 — your day. Nineteen years of you, and somehow you still have the power to make one ordinary moment feel like my favourite memory. May this year be gentle with your heart, generous with your dreams and full of reasons to smile.</p>
+<section class="section feature">
+<h3>My Favourite Picture of You ❤️</h3>
+<div class="feature-frame"><img src="photo-01.jpg" alt="Waseela"></div>
+<div class="feature-caption">“Some people become a memory. You became my favourite part of every memory.”</div>
 </section>
 
-<section class="section"><h3>Little Pieces of Us 📸</h3><div class="gallery" id="gallery"></div></section>
-
-<section class="section"><div class="quote">“If I could keep one thing from every memory we've made, I'd keep the feeling of being with you.” ❤️</div></section>
-
-<section class="section"><h3>Our Little Movie 🎬</h3><div id="videos"></div></section>
-
-<section class="section"><h3>Those Secret Café Moments ☕❤️</h3>
-<p class="message">The little meetups, the quiet conversations, the smiles we tried to hide — maybe they looked ordinary to everyone else. To me, they were the kind of moments I would choose to live again.</p>
+<section class="section">
+<h3>To My Beautiful Bebo 🎂</h3>
+<p class="message">9 October 2007 — the day Waseela came into this world. And on this birthday, she turns 19. May nineteen be soft on your heart, bright for your dreams and full of moments that make you genuinely happy. If I could wrap one thing for you, it would be every beautiful moment we've yet to make.</p>
 </section>
 
-<section class="section" style="text-align:center">
-<h3>Bebo × Bubba ♾️</h3>
-<p class="message">You are not just a birthday wish in my story. You're a chapter I keep rereading because every page somehow still feels like home.</p>
-<div style="font-size:45px;margin-top:10px">❤️ ∞ ❤️</div>
+<section class="section">
+<h3>Little Pieces of Us 📸</h3>
+<div class="gallery" id="gallery"></div>
 </section>
-</main></section>
+
+<section class="section">
+<div class="quote">“I don't need a perfect story. I just want more chapters with you.” ❤️</div>
+</section>
+
+<section class="section">
+<h3>Our Secret Little World ☕</h3>
+<p class="message">Those secret café meetups, the quiet smiles, the moments that felt like they belonged to nobody else — they're the memories that make this story ours. Maybe they were small moments, but they have always meant something big to me.</p>
+</section>
+
+<section class="section">
+<h3>Furqan ❤️ Waseela</h3>
+<p class="message">Bubba and Bebo. Two names, one little universe. Thank you for every laugh, every memory, every moment that made my world feel a little warmer.</p>
+<div class="heartline">❤️ ♾️ ❤️</div>
+</section>
+
+<div class="footer">Made with love, for Bebo — from Bubba.<br>Happy 19th Birthday, Waseela. ❤️</div>
+</main>
+</section>
 
 <audio id="jhol" src="jhol.mp3" preload="auto" loop></audio>
+
 <script>
 (function(){
-"use strict";var PASS="FATEH";
+"use strict";
+var PASS="FATEH";
 function $(id){return document.getElementById(id)}
 function unlock(){
-if($("pw").value.trim().toUpperCase()!==PASS){$("error").textContent="Wrong secret word ❤️";return}
-$("error").textContent="";$("lock").style.display="none";$("site").style.display="block";loadMedia();makeSparkles();startFloat();
-var a=$("jhol");a.volume=.72;var p=a.play();if(p&&p.catch)p.catch(function(){});
+ if($("pw").value.trim().toUpperCase()!==PASS){$("error").textContent="Wrong secret word ❤️";return}
+ $("error").textContent="";$("lock").style.display="none";$("site").style.display="block";loadPhotos();floatLove();
+ var a=$("jhol");a.volume=.72;var p=a.play();if(p&&p.catch)p.catch(function(){});
 }
-$("openBtn").onclick=unlock;$("pw").onkeydown=function(e){if(e.key==="Enter")unlock()};
-var photoTexts=[
+$("openBtn").onclick=unlock;
+$("pw").onkeydown=function(e){if(e.key==="Enter")unlock()};
+
+var captions=[
 "One of those little moments I wish I could keep forever. ❤️",
-"Some smiles become memories before you even realize it.",
-"With you, even the simplest moment feels special.",
+"Your smile has a way of making everything feel lighter.",
+"With you, even the simplest moment becomes beautiful.",
 "A tiny piece of our story, kept close to my heart.",
-"If memories had a favourite place, this one would be there.",
-"Just us — and a moment worth remembering.",
-"Proof that happiness can live inside the smallest moments.",
+"Some memories don't fade — they become favourites.",
+"Just us, and a moment worth remembering.",
+"Happiness looks a little like this. ❤️",
 "My favourite kind of beautiful: a memory with you."
 ];
-function loadMedia(){
-var g=$("gallery");
-for(var i=1;i<=8;i++){var card=document.createElement("div");card.className="memory";var img=document.createElement("img");img.src="photo-"+(i<10?"0":"")+i+".jpg";img.alt="Bebo memory";var cap=document.createElement("div");cap.className="caption";cap.textContent=photoTexts[i-1];card.appendChild(img);card.appendChild(cap);g.appendChild(card)}
-var v=$("videos");
-for(var j=1;j<=6;j++){var x=document.createElement("video");x.src="memory-"+(j<10?"0":"")+j+".mp4";x.controls=true;x.playsInline=true;x.preload="metadata";v.appendChild(x)}
+
+function loadPhotos(){
+ var g=$("gallery");
+ for(var i=1;i<=8;i++){
+  var card=document.createElement("div");card.className="memory";
+  var p=document.createElement("div");p.className="photo";p.style.setProperty("--r",(i%2?"-1.2":"1.2")+"deg");
+  var img=document.createElement("img");img.src="photo-"+(i<10?"0":"")+i+".jpg";img.alt="Waseela memory";
+  var c=document.createElement("div");c.className="caption";c.textContent=captions[i-1];
+  p.appendChild(img);card.appendChild(p);card.appendChild(c);g.appendChild(card);
+ }
 }
-$("musicBtn").onclick=function(){var a=$("jhol");if(a.paused){a.play().catch(function(){});this.textContent="♫ Jhol"}else{a.pause();this.textContent="♫ Play Jhol"}};
-function startFloat(){setInterval(function(){var e=document.createElement("span");e.className="float "+(["f1","f2","f3"][Math.floor(Math.random()*3)]);e.textContent=Math.random()>.15?"♥":"✦";e.style.left=Math.random()*100+"vw";e.style.setProperty("--x",(Math.random()*180-90)+"px");e.style.animationDuration=(6+Math.random()*5)+"s";$("floating").appendChild(e);setTimeout(function(){e.remove()},12000)},650)}
-function makeSparkles(){for(var i=0;i<22;i++){var s=document.createElement("i");s.className="sparkle";s.style.left=Math.random()*100+"%";s.style.top=Math.random()*100+"%";s.style.animationDelay=(Math.random()*3)+"s";$("site").appendChild(s)}}
+$("musicBtn").onclick=function(){
+ var a=$("jhol");
+ if(a.paused){a.play().catch(function(){});this.textContent="♫ Jhol"}
+ else{a.pause();this.textContent="♫ Play Jhol"}
+};
+function floatLove(){
+ setInterval(function(){
+  var e=document.createElement("span");e.className="float";
+  e.textContent=Math.random()>.2?"♥":"✦";
+  e.style.left=Math.random()*100+"vw";
+  e.style.fontSize=(10+Math.random()*17)+"px";
+  e.style.setProperty("--x",(Math.random()*180-90)+"px");
+  e.style.animationDuration=(7+Math.random()*5)+"s";
+  $("floatLayer").appendChild(e);
+  setTimeout(function(){e.remove()},13000);
+ },700);
+}
 })();
 </script>
 </body>
