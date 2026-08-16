@@ -1,18 +1,89 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Bebo ❤️</title><style>
-*{box-sizing:border-box}body{margin:0;background:#09070d;color:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}#lock{min-height:100vh;display:grid;place-items:center;padding:24px;background:radial-gradient(circle at 50% 20%,#5b173d,#150a19 48%,#07060b)}.card{width:min(92vw,480px);padding:36px 24px;text-align:center;border:1px solid #ffffff20;border-radius:30px;background:#ffffff0b;backdrop-filter:blur(16px);box-shadow:0 30px 100px #000b}.logo{font-size:64px}.card h1{font-size:50px;margin:5px 0 12px}.muted{color:#d9cbd5;line-height:1.7}input{width:100%;margin:20px 0;padding:16px;border-radius:16px;border:1px solid #ffffff25;background:#08070c;color:white;text-align:center;font-size:18px}button{border:0;border-radius:999px;padding:15px 25px;background:linear-gradient(90deg,#ff4c9a,#ff82bb);color:white;font-weight:700;font-size:16px}#error{color:#ff9fbe;margin-top:12px}#site{display:none;min-height:100vh;background:radial-gradient(circle at 50% 0,#40152f,#0b080e 55%)}main{max-width:900px;margin:auto;padding:25px 17px 70px}.hero{text-align:center;padding:55px 5px 30px}.eyebrow{font-size:12px;letter-spacing:4px;color:#ff9bc4;text-transform:uppercase}.hero h2{font-size:clamp(44px,12vw,85px);line-height:.95;margin:15px 0;background:linear-gradient(90deg,#fff,#ff8dbd);-webkit-background-clip:text;color:transparent}.section{padding:25px;margin:18px 0;border:1px solid #fff2;border-radius:25px;background:#ffffff08}.section h3{font-size:25px;margin:0 0 16px}.message{font-size:18px;line-height:1.9;color:#eadfe8}.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.gallery img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:18px}.vid{width:100%;margin:0 0 14px;border-radius:18px;background:#000}.music{position:fixed;right:16px;bottom:16px;z-index:5;padding:12px 18px;font-size:14px}.heart{position:fixed;z-index:10;pointer-events:none;bottom:-30px;font-size:22px;animation:up 5s linear forwards}@keyframes up{to{transform:translateY(-110vh) translateX(var(--x));opacity:0}}</style></head><body>
-<section id="lock"><div class="card"><div class="logo">❤️</div><h1>Bebo</h1><p class="muted">A little birthday world made just for you.<br>Enter our secret word.</p><input id="pw" type="password" placeholder="Secret word"><button onclick="openSite()">Open My Birthday ❤️</button><div id="error"></div></div></section>
-<section id="site"><button class="music" onclick="toggleMusic()">♫ Jhol</button><main><header class="hero"><div class="eyebrow">Bebo • Birthday 2026</div><h2>Happy Birthday,<br>Bebo ❤️</h2><p class="muted">From your Bubba, with all the memories that made us us.</p></header>
-<section class="section"><h3>21 May 2021 — Our beginning ❤️</h3><p class="message">The day I first proposed to you. From that moment, our story became a collection of little secrets, smiles, café meetups and memories that only we truly understand.</p></section>
-<section class="section"><h3>Happy 19th Birthday 🎂</h3><p class="message">9 October 2007 — the day my Bebo came into this world. Today you're 19, and I hope this new year brings you endless happiness, beautiful moments and every reason to smile.</p></section>
-<section class="section"><h3>Our memories 📸</h3><div class="gallery" id="gallery"></div></section><section class="section"><h3>Our little movie 🎬</h3><div id="videos"></div></section>
-<section class="section" style="text-align:center"><h3>Bebo × Bubba ♾️</h3><p class="message">Some memories don't need a caption. They just need two people who remember exactly how they felt.</p><div style="font-size:44px">❤️ ∞ ❤️</div></section></main></section>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Birthday Bebo ❤️</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#09070d;color:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+#lock{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:22px;background:radial-gradient(circle at 50% 20%,#54183c,#160a18 50%,#08070c)}
+.box{width:min(92vw,480px);padding:36px 24px;text-align:center;border:1px solid #ffffff22;border-radius:30px;background:#ffffff0d;backdrop-filter:blur(18px);box-shadow:0 25px 90px #000b}
+.logo{font-size:62px}.box h1{font-size:48px;margin:5px 0 12px}.muted{color:#d9cbd6;line-height:1.7}
+#pw{width:100%;padding:16px;border-radius:16px;border:1px solid #ffffff25;background:#08070c;color:#fff;font-size:18px;text-align:center;margin:20px 0;outline:0}
+.open{border:0;border-radius:999px;padding:15px 24px;background:linear-gradient(90deg,#ff4c9a,#ff82ba);color:white;font-size:16px;font-weight:700}
+#error{min-height:22px;margin-top:12px;color:#ff9fbe}
+#site{display:none;min-height:100vh;background:radial-gradient(circle at 50% 0,#42142f,#0b080e 58%)}
+main{max-width:920px;margin:auto;padding:20px 17px 70px}.hero{text-align:center;padding:55px 5px 28px}
+.eyebrow{text-transform:uppercase;letter-spacing:4px;color:#ff9fc7;font-size:12px}
+.hero h2{font-size:clamp(45px,12vw,88px);line-height:.94;margin:15px 0;background:linear-gradient(90deg,#fff,#ff8fbe);-webkit-background-clip:text;color:transparent}
+.section{margin:18px 0;padding:25px;border:1px solid #ffffff18;border-radius:25px;background:#ffffff08;box-shadow:0 15px 55px #0005}
+.section h3{margin:0 0 15px;font-size:25px}.message{font-size:18px;line-height:1.9;color:#eadfe8}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.gallery img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:18px;background:#160d16}
+video{display:block;width:100%;margin:0 0 14px;border-radius:18px;background:#000}
+.music{position:fixed;right:15px;bottom:15px;z-index:20;border:0;border-radius:999px;padding:12px 18px;background:#ff579f;color:#fff;font-weight:700;box-shadow:0 10px 30px #0008}
+.heart{position:fixed;z-index:30;pointer-events:none;bottom:-30px;font-size:22px;animation:float 5s linear forwards}
+@keyframes float{to{transform:translateY(-110vh) translateX(var(--x));opacity:0}}
+</style>
+</head>
+<body>
+<section id="lock"><div class="box"><div class="logo">❤️</div><h1>Bebo</h1>
+<p class="muted">A birthday world made especially for you.<br>Enter our secret word.</p>
+<input id="pw" type="password" placeholder="Secret word" autocomplete="off">
+<button class="open" id="openBtn">Open My Birthday ❤️</button><div id="error"></div></div></section>
+
+<section id="site"><button class="music" id="musicBtn">♫ Jhol</button><main>
+<header class="hero"><div class="eyebrow">Bebo • Birthday 2026</div><h2>Happy Birthday,<br>Bebo ❤️</h2>
+<p class="muted">From your Bubba, with all the memories that made us us.</p></header>
+<section class="section"><h3>21 May 2021 — Our Beginning ❤️</h3>
+<p class="message">The day I first proposed to you. From that moment, our story became a collection of little secrets, smiles, café meetups and memories that only we truly understand.</p></section>
+<section class="section"><h3>Happy 19th Birthday 🎂</h3>
+<p class="message">9 October 2007 — the day my Bebo came into this world. Today you're 19, and I hope this new year of your life brings you endless happiness, beautiful moments and every reason to smile.</p></section>
+<section class="section"><h3>Our Memories 📸</h3><div class="gallery" id="gallery"></div></section>
+<section class="section"><h3>Our Little Movie 🎬</h3><div id="videos"></div></section>
+<section class="section" style="text-align:center"><h3>Bebo × Bubba ♾️</h3>
+<p class="message">Some memories don't need a caption. They just need two people who remember exactly how they felt.</p><div style="font-size:44px">❤️ ∞ ❤️</div></section>
+</main></section>
 <audio id="jhol" src="jhol.mp3" preload="auto" loop></audio>
+
 <script>
-const PASS="FATEH", photos=Array.from({length:8},(_,i)=>`photo-${String(i+1).padStart(2,"0")}.jpg`), videos=Array.from({length:6},(_,i)=>`memory-${String(i+1).padStart(2,"0")}.mp4`);
-function openSite(){if(document.getElementById("pw").value.trim().toUpperCase()!==PASS){error.textContent="Wrong secret word ❤️";return}lock.style.display="none";site.style.display="block";load();jhol.volume=.7;jhol.play().catch(()=>{});hearts()}
-pw.addEventListener("keydown",e=>{if(e.key==="Enter")openSite()});
-function load(){photos.forEach(n=>{let i=new Image();i.src=n;i.alt="Bebo memory";gallery.appendChild(i)});videos.forEach(n=>{let v=document.createElement("video");v.className="vid";v.src=n;v.controls=true;v.playsInline=true;videosEl.appendChild(v)})}
-function toggleMusic(){jhol.paused?jhol.play():jhol.pause()}
-const gallery=document.getElementById("gallery"),videosEl=document.getElementById("videos"),jhol=document.getElementById("jhol"),lock=document.getElementById("lock"),site=document.getElementById("site"),pw=document.getElementById("pw"),error=document.getElementById("error");
-function hearts(){setInterval(()=>{let h=document.createElement("span");h.className="heart";h.textContent=Math.random()>.2?"❤️":"💗";h.style.left=Math.random()*100+"vw";h.style.setProperty("--x",(Math.random()*180-90)+"px");document.body.appendChild(h);setTimeout(()=>h.remove(),5500)},650)}
-</script></body></html>
+(function(){
+"use strict";
+var PASS="FATEH";
+function $(x){return document.getElementById(x);}
+function unlock(){
+ var value=$("pw").value.trim().toUpperCase();
+ if(value!==PASS){$("error").textContent="Wrong secret word ❤️";return;}
+ $("error").textContent="";$("lock").style.display="none";$("site").style.display="block";
+ loadMedia();startHearts();
+ var a=$("jhol");a.volume=.75;
+ var p=a.play();if(p&&p.catch)p.catch(function(){});
+}
+$("openBtn").addEventListener("click",unlock);
+$("pw").addEventListener("keydown",function(e){if(e.key==="Enter")unlock();});
+
+function loadMedia(){
+ var g=$("gallery");
+ for(var i=1;i<=8;i++){
+  var n="photo-"+(i<10?"0":"")+i+".jpg",img=document.createElement("img");
+  img.src=n;img.alt="Bebo memory";g.appendChild(img);
+ }
+ var vwrap=$("videos");
+ for(var j=1;j<=6;j++){
+  var n2="memory-"+(j<10?"0":"")+j+".mp4",v=document.createElement("video");
+  v.src=n2;v.controls=true;v.playsInline=true;v.preload="metadata";vwrap.appendChild(v);
+ }
+}
+$("musicBtn").addEventListener("click",function(){
+ var a=$("jhol");if(a.paused){a.play().catch(function(){});this.textContent="♫ Jhol";}else{a.pause();this.textContent="♫ Play Jhol";}
+});
+function startHearts(){
+ setInterval(function(){
+  var h=document.createElement("span");h.className="heart";h.textContent=Math.random()>.2?"❤️":"💗";
+  h.style.left=Math.random()*100+"vw";h.style.setProperty("--x",(Math.random()*180-90)+"px");
+  document.body.appendChild(h);setTimeout(function(){h.remove();},5500);
+ },650);
+}
+})();
+</script>
+</body>
+</html>
