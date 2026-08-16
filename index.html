@@ -37,15 +37,24 @@ main{max-width:940px;margin:auto;padding:20px 17px 100px}
 .feature{text-align:center;padding:8px 0 12px}.feature-frame{position:relative;max-width:680px;margin:auto;padding:10px;border-radius:30px;background:linear-gradient(135deg,#ffd0dc55,#7b153544,#ff6f9c33);box-shadow:0 30px 100px #000b}
 .feature-frame:before{content:"";position:absolute;inset:-2px;border-radius:32px;border:1px solid #ffd4df55;animation:pulse 3s ease-in-out infinite}
 .feature img{display:block;width:100%;max-height:72vh;object-fit:contain;border-radius:23px;background:#12060b;animation:breath 6s ease-in-out infinite}
+.feature-frame:after{content:"";position:absolute;inset:12px;border-radius:24px;border:1px solid #fff3;box-shadow:0 0 45px #ff5c9333 inset;pointer-events:none;animation:frameGlow 4s ease-in-out infinite}
+@keyframes frameGlow{50%{box-shadow:0 0 75px #ff5c9355 inset;opacity:.7}}
 @keyframes breath{50%{transform:scale(1.012)}}
 @keyframes pulse{50%{opacity:.4;transform:scale(1.008)}}
 .feature-caption{font-family:Georgia,serif;font-size:17px;color:#f6dce5;margin-top:16px;font-style:italic}
 
 .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-.memory{perspective:900px;text-align:center;animation:rise .9s ease both}
+.memory{perspective:1000px;text-align:center;animation:rise .9s ease both}
 .memory:nth-child(2n){animation-delay:.12s}.memory:nth-child(3n){animation-delay:.22s}
-.memory .photo{position:relative;border-radius:22px;padding:7px;background:linear-gradient(145deg,#ffffff1c,#ff6f9c12);box-shadow:0 18px 50px #0009;transform:rotate(var(--r));transition:.7s ease}
-.memory .photo:hover{transform:rotate(0) translateY(-10px) scale(1.025);box-shadow:0 30px 70px #ff477d2e}
+.memory .photo{position:relative;border-radius:24px;padding:7px;background:linear-gradient(145deg,#ffffff24,#ff6f9c18);box-shadow:0 18px 50px #0009;transform:rotate(var(--r));animation:lovelyFloat 4.8s ease-in-out infinite;transition:.7s ease;will-change:transform}
+.memory:nth-child(2n) .photo{animation-delay:-2.1s}
+.memory:nth-child(3n) .photo{animation-delay:-3.3s}
+.memory .photo:after{content:"";position:absolute;inset:5px;border-radius:19px;border:1px solid #ffd4df2e;pointer-events:none;animation:borderGlow 3s ease-in-out infinite}
+.memory .photo:before{content:attr(data-emoji);position:absolute;z-index:4;right:-8px;top:-13px;font-size:25px;filter:drop-shadow(0 5px 10px #0008);animation:emojiBob 2.4s ease-in-out infinite}
+.memory .photo:hover{animation-play-state:paused;transform:rotate(0) translateY(-13px) scale(1.04);box-shadow:0 30px 75px #ff477d45}
+@keyframes lovelyFloat{0%,100%{transform:rotate(var(--r)) translate3d(0,0,0)}25%{transform:rotate(calc(var(--r) * -1)) translate3d(0,-7px,0)}50%{transform:rotate(var(--r)) translate3d(0,-12px,0)}75%{transform:rotate(calc(var(--r) * -.6)) translate3d(0,-5px,0)}}
+@keyframes borderGlow{50%{opacity:.35;box-shadow:0 0 25px #ff82aa33 inset}}
+@keyframes emojiBob{50%{transform:translateY(-5px) rotate(8deg)}}
 .memory img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:17px}
 .caption{padding:12px 4px 4px;font-family:Georgia,serif;font-size:15px;line-height:1.6;color:#f6dbe3}
 @keyframes rise{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
@@ -138,6 +147,7 @@ function unlock(){
 $("openBtn").onclick=unlock;
 $("pw").onkeydown=function(e){if(e.key==="Enter")unlock()};
 
+var emojis=["💗","💕","✨","🌹","🦋","💞","🥰","❤️"];
 var captions=[
 "One of those little moments I wish I could keep forever. ❤️",
 "Your smile has a way of making everything feel lighter.",
@@ -153,7 +163,7 @@ function loadPhotos(){
  var g=$("gallery");
  for(var i=1;i<=8;i++){
   var card=document.createElement("div");card.className="memory";
-  var p=document.createElement("div");p.className="photo";p.style.setProperty("--r",(i%2?"-1.2":"1.2")+"deg");
+  var p=document.createElement("div");p.className="photo";p.style.setProperty("--r",(i%2?"-1.2":"1.2")+"deg");p.setAttribute("data-emoji",emojis[i-1]);
   var img=document.createElement("img");img.src="photo-"+(i<10?"0":"")+i+".jpg";img.alt="Waseela memory";
   var c=document.createElement("div");c.className="caption";c.textContent=captions[i-1];
   p.appendChild(img);card.appendChild(p);card.appendChild(c);g.appendChild(card);
